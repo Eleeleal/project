@@ -1,3 +1,52 @@
+/* Body umum */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* Judul halaman */
+h1 {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem;
+  margin: 0;
+}
+
+/* Form dan tabel */
+form, table {
+  margin: 1rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Input, textarea, button */
+input, textarea, button {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Tombol */
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Navbar */
 nav {
   background: #333;
   padding: 0.5rem 1rem;
@@ -20,6 +69,7 @@ nav a {
   font-weight: bold;
 }
 
+/* Hover link */
 nav a:hover {
   text-decoration: underline;
 }
@@ -27,4 +77,16 @@ nav a:hover {
 /* Highlight link aktif */
 nav a.active {
   color: orange;
+}
+
+/* Tabel monitoring */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
 }
