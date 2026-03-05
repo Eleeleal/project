@@ -10,7 +10,9 @@ form.addEventListener("submit", async (e) => {
     actual: Number(document.getElementById("actual").value),
     issues: document.getElementById("issues").value,
     followUp: document.getElementById("followUp").value,
-    createdAt: new Date().toISOString()
+    createdAt: new Date().toISOString(),
+    progressItems: ["Pekerjaan A", "Pekerjaan B", "Pekerjaan C"], // default list progres
+    progressChecked: []
   };
 
   try {
