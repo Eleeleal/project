@@ -30,11 +30,23 @@
         <th>Rencana (%)</th>
         <th>Realisasi (%)</th>
         <th>Selisih</th>
-        <th>Progress</th>
+        <th>Aksi</th>
       </tr>
     </thead>
     <tbody></tbody>
   </table>
+
+  <!-- Modal -->
+  <div id="progressModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Detail Progres</h2>
+      <form id="progressForm">
+        <div id="progressList"></div>
+        <button type="submit">Simpan Progres</button>
+      </form>
+    </div>
+  </div>
 
   <script>
     if ("serviceWorker" in navigator) {
