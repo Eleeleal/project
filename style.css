@@ -48,8 +48,12 @@ button:hover {
 
 /* Navbar */
 nav {
-  background: #333;
+  background: linear-gradient(90deg, #333, #555);
   padding: 0.5rem 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav ul {
@@ -60,23 +64,42 @@ nav ul {
 }
 
 nav li {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-/* Hover link */
+/* Hover efek */
 nav a:hover {
-  text-decoration: underline;
+  color: #4CAF50;
 }
 
-/* Highlight link aktif */
+/* Highlight aktif */
 nav a.active {
   color: orange;
+}
+
+/* Garis bawah animasi */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: orange;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
 }
 
 /* Tabel monitoring */
@@ -90,3 +113,4 @@ table th, table td {
   border-bottom: 1px solid #ddd;
   text-align: left;
 }
+
