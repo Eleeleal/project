@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Monitoring Proyek</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="app-monitor.js" defer></script>
+</head>
+<body>
+  <h1>Monitoring Laporan Harian</h1>
+  <table id="reportTable">
+    <thead>
+      <tr>
+        <th>Proyek</th>
+        <th>Lokasi</th>
+        <th>Aktivitas</th>
+        <th>Rencana (%)</th>
+        <th>Realisasi (%)</th>
+        <th>Selisih</th>
+        <th>Progress</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js");
+    }
+  </script>
+</body>
+</html>
